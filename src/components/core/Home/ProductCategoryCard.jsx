@@ -4,9 +4,9 @@ import React from 'react'
 function ProductCategoryCard({image, text, subText}) {
   return (
     <div className="max-w-xs mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
-      <div className="relative">
+      <div className="relative group">
         <img className="w-full h-48 object-cover" src={image} alt="Open Source Projects" />
-        <div className="absolute bottom-0 left-0 right-0 flex flex-col bg-black bg-opacity-50 px-4 py-2">
+        <div className="absolute bottom-0 left-0 right-0 flex flex-col bg-black bg-opacity-50 px-4 py-2 tranform translate-y-full group-hover:translate-y-0 transition-transform duration-200 ease-in-out">
           <h2 className="text-white text-xl font-bold">{text}</h2>
           <p className='text-white text-[15px] font-semibold'>{subText}</p>
         </div>

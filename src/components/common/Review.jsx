@@ -63,6 +63,40 @@ function Review() {
 				}}
 				modules={[FreeMode, Pagination, Autoplay]}
 				className='w-full'
+				breakpoints={{
+						320: {
+							slidesPerView: 1,
+							spaceBetween: 10,
+						},
+						480: {
+							slidesPerView: 1,
+							spaceBetween: 10,
+						},
+						540: {
+							slidesPerView: 1,
+							spaceBetween: 10,
+						},
+						640: {
+							slidesPerView: 2,
+							spaceBetween: 15,
+						},
+						768: {
+							slidesPerView: 2,
+							spaceBetween: 20,
+						},
+						1024: {
+							slidesPerView: 3,
+							spaceBetween: 30,
+						},
+						1280: {
+							slidesPerView: 4,
+							spaceBetween: 40,
+						},
+						1458: {
+							slidesPerView: 4,
+							spaceBetween: 40,
+						},
+					}}
 			>
 				{reviews.map((review, i) => (
 					<SwiperSlide key={i} className=''>
@@ -83,7 +117,7 @@ function Review() {
 								</div>
 								<p className='text-gray-700 text-base'>{review.text}</p>
 							</div>
-							<div className='flex flex-row justify-between items-center px-6 pt-4 pb-2'>
+							<div className='flex flex-row flex-wrap justify-between items-center px-6 pt-4 pb-2'>
 								{review.tags.map((tag, index) => (
 									<span
 										key={index}

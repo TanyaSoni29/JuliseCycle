@@ -23,31 +23,46 @@ function Home() {
 			<HeroSection />
 			{/* Product Category */}
 
-			<div className='flex flex-col gap-10 w-[80%] mx-auto p-4 mt-20'>
+			<div className='flex flex-col justify-center items-center gap-10 w-[80%] mx-auto p-4 mt-20'>
 				<div className='text-center text-5xl font-semibold mt-6'>
 					Product Category
 				</div>
-				<div className='w-11/12 mx-auto text-center text-grey text-lg font-bold flex lg:flex-row gap-2 mt-8'>
-					<ProductCategoryCard
-						image={ProductCategoryImg1}
-						text={'Trek Bikes'}
-						subText={'See the range'}
-					/>
-					<ProductCategoryCard
-						image={ProductCategoryImg2}
-						text={'Shimano Service Center'}
-						subText={'24X7'}
-					/>
-					<ProductCategoryCard
-						image={ProductCategoryImg3}
-						text={'0% Finance'}
-						subText={'Available now'}
-					/>
-					<ProductCategoryCard
-						image={ProductCategoryImg4}
-						text={'E-Bikes'}
-						subText={'See the range'}
-					/>
+				<div className='w-11/12 mx-auto text-center text-grey text-lg font-bold flex flex-wrap justify-center items-center lg:flex-nowrap gap-2 mt-8'>
+					<div className='flex-grow sm:flex-grow-0 sm:w-1/2 md:w-1/3 lg:w-1/4'>
+						<ProductCategoryCard
+							image={ProductCategoryImg1}
+							text={'Trek Bikes'}
+							subText={'See the range'}
+						/>
+					</div>
+					<div className='flex-grow sm:flex-grow-0 sm:w-1/2 md:w-1/3 lg:w-1/4'>
+						<ProductCategoryCard
+							image={ProductCategoryImg2}
+							text={'Shimano Service Center'}
+							subText={'24X7'}
+						/>
+					</div>
+					<div className='flex-grow sm:flex-grow-0 sm:w-1/2 md:w-1/3 lg:w-1/4'>
+						<ProductCategoryCard
+							image={ProductCategoryImg3}
+							text={'0% Finance'}
+							subText={'Available now'}
+						/>
+					</div>
+					<div className='flex-grow sm:flex-grow-0 sm:w-1/2 md:w-1/3 lg:w-1/4'>
+						<ProductCategoryCard
+							image={ProductCategoryImg4}
+							text={'E-Bikes'}
+							subText={'See the range'}
+						/>
+					</div>
+					{/* <div className='flex-grow sm:flex-grow-0 sm:w-1/2 md:w-1/3 lg:w-1/4'>
+						<ProductCategoryCard
+							image={ProductCategoryImg5}
+							text={'Business Open As Usual'}
+							subText={'Temporary Road Works'}
+						/>
+					</div> */}
 				</div>
 
 				<div className='flex gap-7 mt-2 mx-auto'>
