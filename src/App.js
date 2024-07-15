@@ -8,7 +8,7 @@ import Register from './pages/Register';
 
 function App() {
   return (
-    <div className="w-screen min-h-screen flex flex-col overflow-x-hidden">
+    <div className="w-screen min-h-screen flex flex-col overflow-x-hidden relative">
       <Navbar />
      <Routes>
        <Route path="/" element={<Home />} />
