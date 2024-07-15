@@ -116,48 +116,21 @@ function FeaturedProductCards() {
 							className='p-2'
 						>
 							<div className='flex flex-col max-w-lg rounded-md bg-white gap-2 justify-center items-center p-2'>
-								{/* <Link to='#'>
-									<img
-										className='rounded-t-lg'
-										src={product.image}
-										alt='product image'
-									/>
-								</Link>
-								<div className='flex flex-col justify-between items-center px-2 pb-4 w-full'>
-									<div className='text-center'>
-										<h5 className='text-xl font-semibold text-black'>
-											{product.title}
-										</h5>
-										<p>{product.description}</p>
-										<p>{product.colors}</p>
-									</div>
-									<div className='flex flex-col justify-center items-center gap-2'>
-										<div className='flex justify-center items-center'>
-											<GoStarFill color='#F7F700' fontSize={22} />
-											<GoStarFill color='#F7F700' fontSize={22} />
-											<GoStarFill color='#F7F700' fontSize={22} />
-											<GoStarFill color='#F7F700' fontSize={22} />
-											<GoStarFill color='#F7F700' fontSize={22} />
-										</div>
-										<p className='text-black text-xl font-medium'>
-											{product.rating}
-										</p>
-									</div>
-								</div> */}
 								<div className='w-[300px] flex flex-col p-4 gap-4 border rounded-md shadow-lg hover:shadow-[255_255_255_255] '>
 									<div className='flex flex-col justify-center items-center'>
 										<img
 											src={product.image}
 											className=''
 										/>
-										
 									</div>
 									<div className='flex justify-between items-center gap-2'>
 										<div>
 											<div className='text-gray-500 hover:text-blue-600 line-clamp-1'>
 												{product.title}
 											</div>
-											<div className='text-gray-400 text-[0.8rem]'>{product.description}</div>
+											<div className='text-gray-400 text-[0.8rem]'>
+												{product.description}
+											</div>
 										</div>
 										<div>⭐⭐⭐⭐⭐</div>
 									</div>
@@ -168,13 +141,16 @@ function FeaturedProductCards() {
 										<div>10%</div>
 									</div>
 									<div className='flex w-full items-center justify-end gap-2 mx-auto'>
-									<div className="bg-pink-400 w-4 h-4 rounded-full"></div>
-									<div className="bg-pink-400 w-4 h-4 rounded-full"></div>
-									<button className='text-black bg-gray-300 py-1 px-4 font-medium rounded-md'>Buy Now</button>
-									<button className='border border-gray-300 font-medium rounded-md py-1 px-2'>Add to Cart</button>
+										<div className='bg-pink-400 w-4 h-4 rounded-full'></div>
+										<div className='bg-pink-400 w-4 h-4 rounded-full'></div>
+										<button className='text-black bg-gray-300 py-1 px-4 font-medium rounded-md'>
+											Buy Now
+										</button>
+										<button className='border border-gray-300 font-medium rounded-md py-1 px-2'>
+											Add to Cart
+										</button>
+									</div>
 								</div>
-								</div>
-								
 							</div>
 						</SwiperSlide>
 					))}
