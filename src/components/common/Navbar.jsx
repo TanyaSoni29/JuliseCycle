@@ -10,6 +10,7 @@ import { NavbarData } from '../../data/NavbarData';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { RxCross2 } from 'react-icons/rx';
 import { MdArrowRight } from 'react-icons/md';
+import { useSelector } from 'react-redux';
 
 const CATEGORY_TITLES = [
 	'Bikes',
@@ -42,6 +43,7 @@ const CategoryDropdown = ({ title, links }) => (
 function Navbar() {
 	const [inputVisible, setInputVisible] = useState(false);
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+	const {cart} = useSelector(state => state.cart);
 
 	const handleButtonClick = () => {
 		setInputVisible(!inputVisible);
@@ -108,11 +110,16 @@ function Navbar() {
 							fontSize={18}
 						/>
 					</Link>
-
+					<Link to='/basket'>
+					<div>
 					<BsCart4
-						fontWeight={2}
-						fontSize={18}
-					/>
+							fontWeight={2}
+							fontSize={18}
+							className='text-white'
+						/>
+						{/* {cart.length>0 && (<span className='absolute -top-1 -right-2 bg-green-600 text-xs h-5 w-5 flex justify-center items-center animate-bounce rounded-full text-white'>{cart.length}</span>) } */}
+					</div>
+					</Link>
 				</div>
 
 				<div className='md:hidden flex gap-4 items-center'>
@@ -134,11 +141,17 @@ function Navbar() {
 							/>
 						)}
 					</div>
+					<Link to='/basket'>
+					<div>
 					<BsCart4
-						fontWeight={2}
-						fontSize={18}
-						className='text-white'
-					/>
+							fontWeight={2}
+							fontSize={18}
+							className='text-white'
+						/>
+						{/* {cart.length>0 && (<span className='absolute -top-1 -right-2 bg-green-600 text-xs h-5 w-5 flex justify-center items-center animate-bounce rounded-full text-white'>{cart.length}</span>) } */}
+					</div>
+						
+					</Link>
 					<button
 						onClick={handleHambergerClick}
 						className='text-white'
@@ -172,14 +185,27 @@ function Navbar() {
 							);
 						})}
 
-						<div className='font-medium flex justify-start items-center mb-4 border-b-[1px] border-b-gray-800 w-full p-2 uppercase'>Sales</div>
-						<div className='font-medium flex justify-start items-center mb-4 border-b-[1px] border-b-gray-800 w-full p-2 uppercase'>Brands</div>
-						<div className='font-medium flex justify-start items-center mb-4 border-b-[1px] border-b-gray-800 w-full p-2 uppercase'>Workshop</div>
-						<div className='font-medium flex justify-start items-center mb-4 border-b-[1px] border-b-gray-800 w-full p-2 uppercase'>Contact Us</div>
-						<div className='font-medium flex justify-start items-center mb-4 border-b-[1px] border-b-gray-800 w-full p-2 uppercase'>Latest News</div>
-						<div className='font-medium flex justify-start items-center mb-4 border-b-[1px] border-b-gray-800 w-full p-2 uppercase'>Login</div>
-						<div className='font-medium flex justify-start items-center mb-4 border-b-[1px] border-b-gray-800 w-full p-2 uppercase'>Register</div>
-						
+						<div className='font-medium flex justify-start items-center mb-4 border-b-[1px] border-b-gray-800 w-full p-2 uppercase'>
+							Sales
+						</div>
+						<div className='font-medium flex justify-start items-center mb-4 border-b-[1px] border-b-gray-800 w-full p-2 uppercase'>
+							Brands
+						</div>
+						<div className='font-medium flex justify-start items-center mb-4 border-b-[1px] border-b-gray-800 w-full p-2 uppercase'>
+							Workshop
+						</div>
+						<div className='font-medium flex justify-start items-center mb-4 border-b-[1px] border-b-gray-800 w-full p-2 uppercase'>
+							Contact Us
+						</div>
+						<div className='font-medium flex justify-start items-center mb-4 border-b-[1px] border-b-gray-800 w-full p-2 uppercase'>
+							Latest News
+						</div>
+						<div className='font-medium flex justify-start items-center mb-4 border-b-[1px] border-b-gray-800 w-full p-2 uppercase'>
+							Login
+						</div>
+						<div className='font-medium flex justify-start items-center mb-4 border-b-[1px] border-b-gray-800 w-full p-2 uppercase'>
+							Register
+						</div>
 					</div>
 				</div>
 			)}

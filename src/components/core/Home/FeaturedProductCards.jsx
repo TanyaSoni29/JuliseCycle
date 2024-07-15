@@ -1,6 +1,6 @@
 /** @format */
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import FeatureImg from '../../../assets/Images/Featured Product Image/trek-wahoo-26_22549_tmbLong.jpg';
 import { GoStarFill } from 'react-icons/go';
 import { Link } from 'react-router-dom';
@@ -13,45 +13,62 @@ import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 
 import { Autoplay, FreeMode, Pagination } from 'swiper/modules';
+import { useDispatch, useSelector } from 'react-redux';
+
+const Products = [
+	{
+		image: `${FeatureImg}`,
+		title: 'AVANT H50',
+		description: 'Orbea',
+		colors: 'only color',
+		rating: '5.0',
+	},
+	{
+		image: `${FeatureImg}`,
+		title: 'AVANT H50',
+		description: 'Orbea',
+		colors: 'only color',
+		rating: '5.0',
+	},
+	{
+		image: `${FeatureImg}`,
+		title: 'AVANT H50',
+		description: 'Orbea',
+		colors: 'only color',
+		rating: '5.0',
+	},
+	{
+		image: `${FeatureImg}`,
+		title: 'AVANT H50',
+		description: 'Orbea',
+		colors: 'only color',
+		rating: '5.0',
+	},
+	{
+		image: `${FeatureImg}`,
+		title: 'AVANT H50',
+		description: 'Orbea',
+		colors: 'only color',
+		rating: '5.0',
+	},
+];
 
 function FeaturedProductCards() {
-	const Products = [
-		{
-			image: `${FeatureImg}`,
-			title: 'AVANT H50',
-			description: 'Orbea',
-			colors: 'only color',
-			rating: '5.0',
-		},
-		{
-			image: `${FeatureImg}`,
-			title: 'AVANT H50',
-			description: 'Orbea',
-			colors: 'only color',
-			rating: '5.0',
-		},
-		{
-			image: `${FeatureImg}`,
-			title: 'AVANT H50',
-			description: 'Orbea',
-			colors: 'only color',
-			rating: '5.0',
-		},
-		{
-			image: `${FeatureImg}`,
-			title: 'AVANT H50',
-			description: 'Orbea',
-			colors: 'only color',
-			rating: '5.0',
-		},
-		{
-			image: `${FeatureImg}`,
-			title: 'AVANT H50',
-			description: 'Orbea',
-			colors: 'only color',
-			rating: '5.0',
-		},
-	];
+	const {cart} = useSelector(state => state.cart) 
+	const [products, setProducts] = useState([]);
+	const dispatch = useDispatch();
+
+	const fetchData = async () => {
+		try {
+			setProducts(Products);
+		} catch (error) {
+			console.error(error.message);
+		}
+	};
+
+	useEffect(() => {
+		fetchData();
+	}, []);
 
 	// const pagination = {
 	// 	clickable: true,
@@ -59,6 +76,11 @@ function FeaturedProductCards() {
 	// 		return '<span class="' + className + '"></span>';
 	// 	  },
 	// }
+
+	const addtoCart = () => {
+		// dispatch(add())
+		console.log('Added to Cart');
+	};
 
 	return (
 		<div>
@@ -110,12 +132,12 @@ function FeaturedProductCards() {
 						},
 					}}
 				>
-					{Products.map((product, i) => (
+					{products.map((product, i) => (
 						<SwiperSlide
 							key={i}
 							className='p-2'
 						>
-							<div className='flex flex-col max-w-lg rounded-md bg-white gap-2 justify-center items-center p-2'>
+							<div className='flex flex-col max-w-lg rounded-md bg-white gap-2 justify-center items-center p-2' key={i}>
 								<div className='w-[300px] flex flex-col p-4 gap-4 border rounded-md shadow-lg hover:shadow-[255_255_255_255] '>
 									<div className='flex flex-col justify-center items-center'>
 										<img
@@ -146,9 +168,16 @@ function FeaturedProductCards() {
 										<button className='text-black bg-gray-300 py-1 px-4 font-medium rounded-md'>
 											Buy Now
 										</button>
-										<button className='border border-gray-300 font-medium rounded-md py-1 px-2'>
+										<button
+											className='border border-gray-300 font-medium rounded-md py-1 px-2'
+											onClick={addtoCart}
+										>
 											Add to Cart
 										</button>
+										{/* {
+											cart.some((p) => p.id === product.id) ? "" : ()
+										} */}
+										
 									</div>
 								</div>
 							</div>
