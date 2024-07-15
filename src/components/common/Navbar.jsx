@@ -7,6 +7,7 @@ import { FaRegUser } from 'react-icons/fa';
 import { IoSearchSharp } from 'react-icons/io5';
 import { BsCart4 } from 'react-icons/bs';
 import { NavbarData } from '../../data/NavbarData';
+// import { GiHamburgerMenu } from 'react-icons/gi';
 
 const CATEGORY_TITLES = [
 	'Bikes',
@@ -17,13 +18,13 @@ const CATEGORY_TITLES = [
 ];
 
 const CategoryDropdown = ({ title, links }) => (
-	<div className='group'>
-		<p className='font-medium'>{title}</p>
-		<div className='invisible absolute z-[1000] top-10 left-0 w-full group-hover:visible bg-white rounded-md shadow-[0_3px_10px_rgb(0,0,0,0.2)] text-black flex justify-start gap-8 p-4 flex-wrap'>
-			<div className='grid grid-cols-6 gap-x-8 gap-y-4 place-content-center place-items-start mx-auto font-medium'>
+	<div className='group py-8'>
+		<p className='font-medium cursor-pointer'>{title}</p>
+		<div className='invisible opacity-0 transition-opacity duration-200 ease-linear absolute z-[1000] top-20 left-0 w-full group-hover:visible group-hover:opacity-100 bg-white rounded-md shadow-[0_3px_10px_rgb(0,0,0,0.2)] text-black flex justify-start p-2 flex-wrap hover:opacity-100'>
+			<div className='grid grid-cols-6 gap-x-8 gap-y-4 place-content-center place-items-start mx-auto font-medium cursor-pointer'>
 				{links.map((sublink, index) => (
 					<Link to={sublink.link}>
-						<p key={index}>{sublink.title}</p>
+						<p key={index} className=''>{sublink.title}</p>
 					</Link>
 				))}
 			</div>
@@ -34,11 +35,12 @@ const CategoryDropdown = ({ title, links }) => (
 function Navbar() {
 	const [inputVisible, setInputVisible] = useState(false);
 
+
   const handleButtonClick = () => {
     setInputVisible(!inputVisible);
   };
 	return (
-		<div className='bg-gradient-to-r from-violet-600 to-indigo-600 w-full h-18 flex items-center justify-center relative p-4'>
+		<div className='bg-gradient-to-r from-violet-600 to-indigo-600 w-full h-20 flex items-center justify-center relative px-4 py-6'>
 			<div className='flex w-11/12 justify-between max-w-maxContent items-center'>
 				<div>
 					<Link to='/'>
