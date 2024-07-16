@@ -3,7 +3,7 @@ import logoImg from '../assets/Images/store-name.png';
 import { IoIosBicycle } from 'react-icons/io';
 import BgImg from '../assets/Images/bikes1692012374.jpg';
 import { useForm } from 'react-hook-form';
-import EmailConnect from '../components/core/Home/EmailConnect';
+import EmailConnect from '../components/common/EmailConnect';
 import Footer from '../components/common/Footer';
 import { Link } from 'react-router-dom';
 

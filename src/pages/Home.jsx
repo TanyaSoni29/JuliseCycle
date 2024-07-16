@@ -14,7 +14,7 @@ import Review from '../components/common/Review';
 import ReviewImg from '../assets/Images/reviews_by_listen360_large.png';
 import { GoStarFill } from 'react-icons/go';
 
-import EmailConnect from '../components/core/Home/EmailConnect';
+import EmailConnect from '../components/common/EmailConnect';
 import Footer from '../components/common/Footer';
 
 function Home() {

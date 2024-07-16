@@ -13,10 +13,13 @@ import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 
 import { Autoplay, FreeMode, Pagination } from 'swiper/modules';
-import { useDispatch, useSelector } from 'react-redux';
+
+import FeaturedProductCard from './FeaturedProductCard';
+import Spinner from '../../common/Spinner';
 
 const Products = [
 	{
+		id: 1,
 		image: `${FeatureImg}`,
 		title: 'AVANT H50',
 		description: 'Orbea',
@@ -24,6 +27,7 @@ const Products = [
 		rating: '5.0',
 	},
 	{
+		id: 2,
 		image: `${FeatureImg}`,
 		title: 'AVANT H50',
 		description: 'Orbea',
@@ -31,6 +35,7 @@ const Products = [
 		rating: '5.0',
 	},
 	{
+		id: 3,
 		image: `${FeatureImg}`,
 		title: 'AVANT H50',
 		description: 'Orbea',
@@ -38,6 +43,7 @@ const Products = [
 		rating: '5.0',
 	},
 	{
+		id: 4,
 		image: `${FeatureImg}`,
 		title: 'AVANT H50',
 		description: 'Orbea',
@@ -45,6 +51,7 @@ const Products = [
 		rating: '5.0',
 	},
 	{
+		id: 5,
 		image: `${FeatureImg}`,
 		title: 'AVANT H50',
 		description: 'Orbea',
@@ -54,16 +61,18 @@ const Products = [
 ];
 
 function FeaturedProductCards() {
-	const {cart} = useSelector(state => state.cart) 
-	const [products, setProducts] = useState([]);
-	const dispatch = useDispatch();
 
+	const [products, setProducts] = useState([]);
+	const [loading, setLoading] = useState(false);
+	
 	const fetchData = async () => {
+		setLoading(true);
 		try {
 			setProducts(Products);
 		} catch (error) {
 			console.error(error.message);
 		}
+		setLoading(false);
 	};
 
 	useEffect(() => {
@@ -77,14 +86,13 @@ function FeaturedProductCards() {
 	// 	  },
 	// }
 
-	const addtoCart = () => {
-		// dispatch(add())
-		console.log('Added to Cart');
-	};
+	
 
 	return (
 		<div>
-			<div className='flex flex-row md:flex-wrap justify-center items-center w-[80%] gap-2 mx-auto rounded-lg overflow-hidden mt-10'>
+		{
+			loading? (<Spinner/>) : (
+				products.length > 0 ? (<div className='flex flex-row md:flex-wrap justify-center items-center w-[80%] gap-2 mx-auto rounded-lg overflow-hidden mt-10'>
 				<Swiper
 					slidesPerView={1}
 					spaceBetween={10}
@@ -132,59 +140,23 @@ function FeaturedProductCards() {
 						},
 					}}
 				>
-					{products.map((product, i) => (
+					{products.map((product) => (
 						<SwiperSlide
-							key={i}
+							key={product.id}
 							className='p-2'
 						>
-							<div className='flex flex-col max-w-lg rounded-md bg-white gap-2 justify-center items-center p-2' key={i}>
-								<div className='w-[300px] flex flex-col p-4 gap-4 border rounded-md shadow-lg hover:shadow-[255_255_255_255] '>
-									<div className='flex flex-col justify-center items-center'>
-										<img
-											src={product.image}
-											className=''
-										/>
-									</div>
-									<div className='flex justify-between items-center gap-2'>
-										<div>
-											<div className='text-gray-500 hover:text-blue-600 line-clamp-1'>
-												{product.title}
-											</div>
-											<div className='text-gray-400 text-[0.8rem]'>
-												{product.description}
-											</div>
-										</div>
-										<div>⭐⭐⭐⭐⭐</div>
-									</div>
-
-									<div className='flex flex-row flex-wrap gap-2'>
-										<div className='line-through'>3000</div>
-										<div>2000</div>
-										<div>10%</div>
-									</div>
-									<div className='flex w-full items-center justify-end gap-2 mx-auto'>
-										<div className='bg-pink-400 w-4 h-4 rounded-full'></div>
-										<div className='bg-pink-400 w-4 h-4 rounded-full'></div>
-										<button className='text-black bg-gray-300 py-1 px-4 font-medium rounded-md'>
-											Buy Now
-										</button>
-										<button
-											className='border border-gray-300 font-medium rounded-md py-1 px-2'
-											onClick={addtoCart}
-										>
-											Add to Cart
-										</button>
-										{/* {
-											cart.some((p) => p.id === product.id) ? "" : ()
-										} */}
-										
-									</div>
-								</div>
+							<div className='flex flex-col max-w-lg rounded-md bg-white gap-2 justify-center items-center p-2'>
+								<FeaturedProductCard key={product.id} product={product} />
 							</div>
 						</SwiperSlide>
 					))}
 				</Swiper>
-			</div>
+			</div>) : (
+				<div><p>No Data Found</p></div>
+			)
+			)
+		}
+			
 		</div>
 	);
 }

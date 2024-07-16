@@ -1,35 +1,62 @@
 /** @format */
 
-import React from 'react';
-import { MdArrowDropDown } from 'react-icons/md';
-import ProductImg from "../assets/Images/Featured Product Image/trek-wahoo-26_22549_tmbLong.jpg"
+import React, { useEffect, useState } from 'react';
+// import { MdArrowDropDown } from 'react-icons/md';
+// import ProductImg from "../assets/Images/Featured Product Image/trek-wahoo-26_22549_tmbLong.jpg"
+import { useSelector } from 'react-redux';
+import { NavLink } from 'react-router-dom';
+import CartItems from '../components/core/Home/CartItems';
 
 function Basket() {
+ const {cart} = useSelector(state => state.cart);
+ const [totalAmount, setTotalAmount] = useState(0);
+
+ useEffect(() => {
+	setTotalAmount( cart.reduce((acc, crr) => acc + crr.price, 0))
+ },[cart]);
+
+
+
 	return (
 		<div className=' mt-20'>
-			<div className='border-t-[1px] border-black mt-10 w-[60%] mx-auto flex flex-row items-center justify-between p-4 font-medium'>
-				<p>ITEMS</p>
-				<div className='flex flex-row w-[40%] justify-start items-center gap-20'>
-					<p>QUANTITY</p>
-					<p>SUBTOTAL</p>
-					<p></p>
-				</div>
-			</div>
-			<div className='border-t-[1px] border-black mt-10 w-[60%] mx-auto flex flex-row items-center justify-between p-4 font-medium'>
-				<div className='flex justify-start items-center gap-4'>
-					<img src={ProductImg} loading='lazy' alt='productImg' height={150} width={150} className='object-cover'/>
-					<p>Title</p>
-				</div>
-				<div className='flex flex-row justify-start items-center gap-20 w-[40%]'>
-					<div className='flex flex-row justify-center items-center gap-4 border-[1px] border-gray-100 py-2 px-4'>
-						<p>1</p>
-						<MdArrowDropDown className='text-black' />
-					</div>
-                    <p>£2,350.00</p>
-                    <p> × Remove</p>
+			 {
+        cart.length>0 ?
+        (
+          <div className='flex gap-x-20 h-[80vh] mt-10 max-w-6xl mx-auto'>
+            <div className='w-full h-full ml-5'>{
+              cart.map( (item,index) => (
+              <CartItems key={item.id} item={item} itemIndex={index}/>
+              ))
+             }
 
-				</div>
-			</div>
+            </div>
+            <div className='flex flex-col w-full h-full justify-between'>
+             <div className='h-full w-full'>
+                <div className='text-green-700 font-bold uppercase text-1xl'>Your Cart</div>
+                <div className="text-green-800 -mt-[8px] font-bold uppercase text-[40px]">Summary</div>
+                <p className='font-bold mt-20'><span>Total Items: {cart.length}</span></p>
+              </div>
+             
+             
+              <div className=''>
+              <p className='font-bold mb-4'><span className='font-bold text-slate-600'>Total Amount: </span>${totalAmount}</p>
+              <button className='bg-green-700 w-full text-white font-bold rounded-lg p-5 px-10'>Checkout Now</button>
+             </div>
+             </div>
+            
+          </div>
+        
+        ):
+        (<div className='flex flex-col justify-center items-center h-[80vh] gap-4'>
+           <h2 className='font-bold text-2xl'>Your Cart is Empty</h2>
+           <NavLink to="/">
+            <button className='bg-green-700 rounded-full p-4 px-6  text-lg font-bold hover:bg-green-600 transition duration-200 ease-in text-white'>
+              Shop Now
+            </button>
+           </NavLink>
+
+        </div>)
+      }
 		</div>
 	);
 }

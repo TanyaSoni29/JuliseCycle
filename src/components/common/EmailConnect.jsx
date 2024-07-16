@@ -2,7 +2,7 @@
 
 import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
-import CTAButton from './Button';
+
 
 function EmailConnect() {
 	const {
