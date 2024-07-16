@@ -43,7 +43,7 @@ const CategoryDropdown = ({ title, links }) => (
 function Navbar() {
 	const [inputVisible, setInputVisible] = useState(false);
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-	const {cart} = useSelector(state => state.cart);
+	const cart = useSelector(state => state.cart);
 
 	const handleButtonClick = () => {
 		setInputVisible(!inputVisible);
@@ -111,13 +111,13 @@ function Navbar() {
 						/>
 					</Link>
 					<Link to='/basket'>
-					<div>
+					<div className='relative'>
 					<BsCart4
 							fontWeight={2}
 							fontSize={18}
 							className='text-white'
 						/>
-						{/* {cart.length>0 && (<span className='absolute -top-1 -right-2 bg-green-600 text-xs h-5 w-5 flex justify-center items-center animate-bounce rounded-full text-white'>{cart.length}</span>) } */}
+						{cart.length>0 && (<span className='absolute -top-1 -right-2 bg-green-600 text-xs h-5 w-5 flex justify-center items-center animate-bounce rounded-full text-white'>{cart.length}</span>) }
 					</div>
 					</Link>
 				</div>
@@ -142,13 +142,13 @@ function Navbar() {
 						)}
 					</div>
 					<Link to='/basket'>
-					<div>
+					<div className='relative'>
 					<BsCart4
 							fontWeight={2}
 							fontSize={18}
 							className='text-white'
 						/>
-						{/* {cart.length>0 && (<span className='absolute -top-1 -right-2 bg-green-600 text-xs h-5 w-5 flex justify-center items-center animate-bounce rounded-full text-white'>{cart.length}</span>) } */}
+						{cart.length>0 && (<span className='absolute -top-1 -right-2 bg-green-600 text-xs h-5 w-5 flex justify-center items-center animate-bounce rounded-full text-white'>{cart.length}</span>) }
 					</div>
 						
 					</Link>

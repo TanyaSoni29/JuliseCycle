@@ -28,6 +28,7 @@ function HeroSection() {
 			<Swiper
 				pagination={pagination}
 				freeMode={true}
+				loop={true}
 				autoplay={{
 					delay: 3000,
 					disableOnInteraction: false,

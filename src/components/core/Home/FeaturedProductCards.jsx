@@ -2,9 +2,8 @@
 
 import React, { useEffect, useState } from 'react';
 import FeatureImg from '../../../assets/Images/Featured Product Image/trek-wahoo-26_22549_tmbLong.jpg';
-import { GoStarFill } from 'react-icons/go';
-import { Link } from 'react-router-dom';
-import CTAButton from './Button';
+
+import ApiService from '../../../Services/apiService';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import {} from 'swiper/modules';
 import '../../../App.css';
@@ -17,58 +16,67 @@ import { Autoplay, FreeMode, Pagination } from 'swiper/modules';
 import FeaturedProductCard from './FeaturedProductCard';
 import Spinner from '../../common/Spinner';
 
-const Products = [
-	{
-		id: 1,
-		image: `${FeatureImg}`,
-		title: 'AVANT H50',
-		description: 'Orbea',
-		colors: 'only color',
-		rating: '5.0',
-	},
-	{
-		id: 2,
-		image: `${FeatureImg}`,
-		title: 'AVANT H50',
-		description: 'Orbea',
-		colors: 'only color',
-		rating: '5.0',
-	},
-	{
-		id: 3,
-		image: `${FeatureImg}`,
-		title: 'AVANT H50',
-		description: 'Orbea',
-		colors: 'only color',
-		rating: '5.0',
-	},
-	{
-		id: 4,
-		image: `${FeatureImg}`,
-		title: 'AVANT H50',
-		description: 'Orbea',
-		colors: 'only color',
-		rating: '5.0',
-	},
-	{
-		id: 5,
-		image: `${FeatureImg}`,
-		title: 'AVANT H50',
-		description: 'Orbea',
-		colors: 'only color',
-		rating: '5.0',
-	},
-];
+// const Products = [
+// 	{
+// 		id: 1,
+// 		image: `${FeatureImg}`,
+// 		title: 'AVANT H50',
+// 		description: 'Orbea',
+// 		colors: 'only color',
+// 		rating: '5.0',
+// 		price: 200
+// 	},
+// 	{
+// 		id: 2,
+// 		image: `${FeatureImg}`,
+// 		title: 'AVANT H50',
+// 		description: 'Orbea',
+// 		colors: 'only color',
+// 		rating: '5.0',
+// 		price: 200
+// 	},
+// 	{
+// 		id: 3,
+// 		image: `${FeatureImg}`,
+// 		title: 'AVANT H50',
+// 		description: 'Orbea',
+// 		colors: 'only color',
+// 		rating: '5.0',
+// 		price: 200
+// 	},
+// 	{
+// 		id: 4,
+// 		image: `${FeatureImg}`,
+// 		title: 'AVANT H50',
+// 		description: 'Orbea',
+// 		colors: 'only color',
+// 		rating: '5.0',
+// 		price: 200
+// 	},
+// 	{
+// 		id: 5,
+// 		image: `${FeatureImg}`,
+// 		title: 'AVANT H50',
+// 		description: 'Orbea',
+// 		colors: 'only color',
+// 		rating: '5.0',
+// 		price: 200
+// 	},
+// ];
 
 function FeaturedProductCards() {
 
 	const [products, setProducts] = useState([]);
 	const [loading, setLoading] = useState(false);
+
+
 	
 	const fetchData = async () => {
 		setLoading(true);
 		try {
-			setProducts(Products);
+			const Products = await ApiService.getProducts()
+			console.log(Products.data);
+			setProducts(Products.data);
 		} catch (error) {
 			console.error(error.message);
 		}
