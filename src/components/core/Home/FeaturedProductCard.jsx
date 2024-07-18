@@ -7,7 +7,7 @@ import { add } from '../../../redux/Slices/CartSlice';
 function FeaturedProductCard({ product }) {
 	const cart  = useSelector((state) => state.cart);
 	const dispatch = useDispatch();
-    console.log(product?.short_desc?.split(" ").slice(0, 15).join(" ") + "...");
+  
 	const addtoCart = () => {
 		dispatch(add(product));
 		console.log('Product Added to Cart Successfully');

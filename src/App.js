@@ -6,6 +6,8 @@ import { Routes, Route } from 'react-router-dom';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Basket from './pages/Basket';
+import ShopPage from './pages/ShopPage';
+
 
 function App() {
   return (
@@ -16,6 +18,9 @@ function App() {
        <Route path="/login" element={<Login />} />
        <Route path="/register" element={<Register />} />
        <Route path='/basket' element={<Basket />} />
+       <Route path='/shop/:category' element={<ShopPage />} />
+       <Route path='/shop/:category/sub/:subCategory' element={<ShopPage />} />
+      
      </Routes>
      
       

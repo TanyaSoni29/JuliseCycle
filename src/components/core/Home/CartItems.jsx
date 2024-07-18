@@ -9,7 +9,7 @@ function CartItems({ item, itemIndex }) {
 	const dispatch = useDispatch();
 
 	const removeFromCart = () => {
-		console.log('Removing item with id:', item.sku);
+		// console.log('Removing item with id:', item.sku);
 		dispatch(remove(item.sku));
 		console.log('Item Removed Successfully');
 	};

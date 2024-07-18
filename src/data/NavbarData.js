@@ -4,35 +4,35 @@ export const NavbarData = [
         links: [
             {
                 title: "Adventure & Gravel",
-                link: "/",
+                link: "/shop/bikes/sub/adventure-&-gravel",
             },
             {
                 title: "Cyclocross",
-                link: "/",
+                link: "/shop/bikes/sub/cyclocross",
             },
             {
                 title: "Electric",
-                link: "/",
+                link: "/shop/bikes/sub/electric",
             },
             {
                 title: "Hybrid",
-                link: "/",
+                link: "/shop/bikes/sub/hybrid",
             },
             {
                 title: "Kids",
-                link: "/",
+                link: "/shop/bikes/sub/kids",
             },
             {
                 title: "Mountain",
-                link: "/",
+                link: "/shop/bikes/sub/mountain",
             },
             {
                 title: "Road",
-                link: "/",
+                link: "/shop/bikes/sub/road",
             },
             {
                 title: "Triathlon",
-                link: "/",
+                link: "/shop/bikes/sub/triathlon",
             }
         ]
     },
@@ -41,91 +41,91 @@ export const NavbarData = [
         links: [
             {
                 title: "Baselayers",
-                link: "/",
+                link: "/shop/clothing/sub/baselayers",
             },
             {
                 title: "Bib Shorts",
-                link: "/",
+                link: "/shop/clothing/sub/bib-shorts",
             },
             {
                 title: "Bib Tights",
-                link: "/",
+                link: "/shop/clothing/sub/bib-tights",
             },
             {
                 title: "Body Armour",
-                link: "/",
+                link: "/shop/clothing/sub/body-armour",
             },
             {
                 title: "Eyewear",
-                link: "/",
+                link: "/shop/clothing/sub/eyewear",
             },
             {
                 title: "Gilets",
-                link: "/",
+                link: "/shop/clothing/sub/gilets",
             },
             {
                 title: "Gloves",
-                link: "/",
+                link: "/shop/clothing/sub/gloves",
             },
             {
                 title: "Hats",
-                link: "/",
+                link: "/shop/clothing/sub/hats",
             },
             {
                 title: "Hoodies",
-                link: "/",
+                link: "/shop/clothing/sub/hoodies",
             },
             {
                 title: "Jackets",
-                link: "/",
+                link: "/shop/clothing/sub/jackets",
             },
             {
                 title: "Jerseys",
-                link: "/",
+                link: "/shop/clothing/sub/jerseys",
             },
             {
                 title: "Masks",
-                link: "/",
+                link: "/shop/clothing/sub/masks",
             },
             {
                 title: "Pants",
-                link: "/",
+                link: "/shop/clothing/sub/pants",
             },
             {
                 title: "Shoe Covers",
-                link: "/",
+                link: "/shop/clothing/sub/shoe-covers",
             },
             {
                 title: "Shoes",
-                link: "/",
+                link: "/shop/clothing/sub/shoes",
             },
             {
                 title: "Shorts",
-                link: "/",
+                link: "/shop/clothing/sub/shorts",
             },
             {
                 title: "Socks",
-                link: "/",
+                link: "/shop/clothing/sub/socks",
             },
             {
                 title: "Sweatshirts",
-                link: "/",
+                link: "/shop/clothing/sub/sweatshirts",
             },
             {
                 title: "T-Shirts",
-                link: "/",
+                link: "/shop/clothing/sub/t-shirts",
             },
             {
                 title: "Tights",
-                link: "/",
+                link: "/shop/clothing/sub/tights",
             },
             {
                 title: "Vests",
-                link: "/",
+                link: "/shop/clothing/sub/vests",
             },
             {
                 title: "Warmers",
-                link: "/",
+                link: "/shop/clothing/sub/warmers",
             }
         ]
     },
@@ -134,27 +134,27 @@ export const NavbarData = [
         links: [
             {
                 title: "Kids",
-                link: "/",
+                link: "/shop/helmets/sub/kids",
             },
             {
                 title: "Leisure",
-                link: "/",
+                link: "/shop/helmets/sub/leisure",
             },
             {
                 title: "Mountain",
-                link: "/",
+                link: "/shop/helmets/sub/mountain",
             },
             {
                 title: "Road",
-                link: "/",
+                link: "/shop/helmets/sub/road",
             },
             {
                 title: "Spares",
-                link: "/",
+                link: "/shop/helmets/sub/spares",
             },
             {
                 title: "Urban",
-                link: "/",
+                link: "/shop/helmets/sub/urban",
             }
 
         ]
@@ -164,119 +164,119 @@ export const NavbarData = [
         links: [
             {
                 title: "Bags",
-                link: "/",
+                link: "/shop/accessories/sub/bags",
             },
             {
                 title: "Bar Ends",
-                link: "/",
+                link: "/shop/accessories/sub/bar-ends",
             },
             {
                 title: "Bike Bags",
-                link: "/",
+                link: "/shop/accessories/sub/bike-bags",
             },
             {
                 title: "Bike Covers",
-                link: "/",
+                link: "/shop/accessories/sub/bike-covers",
             },
             {
                 title: "Bike Maintenance",
-                link: "/",
+                link: "/shop/accessories/sub/bike-maintenance",
             },
             {
                 title: "Bottles & Cages",
-                link: "/",
+                link: "/shop/accessories/sub/bottles-&-cages",
             },
             {
                 title: "Child Seats",
-                link: "/",
+                link: "/shop/accessories/sub/child-seats",
             },
             {
                 title: "Computers",
-                link: "/",
+                link: "/shop/accessories/sub/computers",
             },
             {
                 title: "Extras",
-                link: "/",
+                link: "/shop/accessories/sub/extras",
             },
             {
                 title: "Frame Protection",
-                link: "/",
+                link: "/shop/accessories/sub/frame-protection",
             },
             {
                 title: "Grip & Tape",
-                link: "/",
+                link: "/shop/accessories/sub/grip-&-tape",
             },
             {
                 title: "Hooks & Hangers",
-                link: "/",
+                link: "/shop/accessories/sub/hooks-&-hangers",
             },
             {
                 title: "Hydration Packs",
-                link: "/",
+                link: "/shop/accessories/sub/hydration-packs",
             },
             {
                 title: "Kick Stands",
-                link: "/",
+                link: "/shop/accessories/sub/kick-stands",
             },
             {
                 title: "Lights",
-                link: "/",
+                link: "/shop/accessories/sub/lights",
             },
             {
                 title: "Locks",
-                link: "/",
+                link: "/shop/accessories/sub/locks",
             },
             {
                 title: "Nutrition",
-                link: "/",
+                link: "/shop/accessories/sub/nutrition",
             },
             {
                 title: "Phone",
-                link: "/",
+                link: "/shop/accessories/sub/phone",
             },
             {
                 title: "Pumps",
-                link: "/",
+                link: "/shop/accessories/sub/pumps",
             },
             {
                 title: "Racks",
-                link: "/",
+                link: "/shop/accessories/sub/racks",
             },
             {
                 title: "Rider Care",
-                link: "/",
+                link: "/shop/accessories/sub/rider-care",
             },
             {
                 title: "Safety",
-                link: "/",
+                link: "/shop/accessories/sub/safety",
             },
             {
                 title: "Sealant",
-                link: "/",
+                link: "/shop/accessories/sub/sealant",
             },
             {
                 title: "Spares",
-                link: "/",
+                link: "/shop/accessories/sub/spares",
             },
             {
                 title: "Stabilisers",
-                link: "/",
+                link: "/shop/accessories/sub/stabilisers",
             },
             {
                 title: "Tools",
-                link: "/",
+                link: "/shop/accessories/sub/tools",
             },
             {
                 title: "Trailers",
-                link: "/",
+                link: "/shop/accessories/sub/trailers",
             },
             {
                 title: "Trainers",
-                link: "/",
+                link: "/shop/accessories/sub/trainers",
             },
             {
                 title: "Tubless KiT",
-                link: "/",
+                link: "/shop/accessories/sub/tubless-kit",
             }
         ]
     },
@@ -285,115 +285,115 @@ export const NavbarData = [
         links: [
             {
                 title: "Bars",
-                link: "/",
+                link: "/shop/components/sub/bars",
             },
             {
                 title: "Batteries",
-                link: "/",
+                link: "/shop/components/sub/batteries",
             },
             {
                 title: "Bearings",
-                link: "/",
+                link: "/shop/components/sub/bearings",
             },
             {
                 title: "Bottom Brackets",
-                link: "/",
+                link: "/shop/components/sub/bottom-brackets",
             },
             {
                 title: "Brakes",
-                link: "/",
+                link: "/shop/components/sub/brakes",
             },
             {
                 title: "Cables",
-                link: "/",
+                link: "/shop/components/sub/cables",
             },
             {
                 title: "Cassette",
-                link: "/",
+                link: "/shop/components/sub/cassette",
             },
             {
                 title: "Chainrings",
-                link: "/",
+                link: "/shop/components/sub/chainrings",
             },
             {
                 title: "Chains",
-                link: "/",
+                link: "/shop/components/sub/chains",
             },
             {
                 title: "Cranks",
-                link: "/",
+                link: "/shop/components/sub/cranks",
             },
             {
                 title: "Cranksets",
-                link: "/",
+                link: "/shop/components/sub/cranksets",
             },
             {
                 title: "Derailleur",
-                link: "/"
+                link: "/shop/components/sub/derailleur"
             },
             {
                 title: "Dropper Posts",
-                link: "/"
+                link: "/shop/components/sub/dropper-posts"
             },
             {
                 title: "E-Bike",
-                link: "/"
+                link: "/shop/components/sub/e-bike"
             },
             {
                 title: "Electronic Gearing",
-                link: "/",
+                link: "/shop/components/sub/electronic-gearing",
             },
             {
                 title: "Fenders",
-                link: "/"
+                link: "/shop/components/sub/fenders"
             },
             {
                 title: "Groupsets",
-                link: "/",
+                link: "/shop/components/sub/groupsets",
             },
             {
                 title: "Headsets",
-                link: "/",
+                link: "/shop/components/sub/headsets",
             },
             {
                 title: "Inner Tubes",
-                link: "/",
+                link: "/shop/components/sub/inner-tubes",
             },
             {
                 title: "Manufacturer Specific",
-                link: "/",
+                link: "/shop/components/sub/manufacturer-specific",
             },
             {
                 title: "Pedals",
-                link: "/",
+                link: "/shop/components/sub/pedals",
             },
             {
                 title: "Saddles",
-                link: "/",
+                link: "/shop/components/sub/saddles",
             },
             {
                 title: "Seatposts",
-                link: "/",
+                link: "/shop/components/sub/seatposts",
             },
             {
                 title: "Shifters",
-                link: "/",
+                link: "/shop/components/sub/shifters",
             },
             {
                 title: "Stems",
-                link: "/",
+                link: "/shop/components/sub/stems",
             },
             {
                 title: "Suspension",
-                link: "/",
+                link: "/shop/components/sub/suspension",
             },
             {
                 title: "Tyres",
-                link: "/",
+                link: "/shop/components/sub/tyres",
             },
             {
                 title: "Wheels",
-                link: "/",
+                link: "/shop/components/sub/wheels",
             }
         ]
     },

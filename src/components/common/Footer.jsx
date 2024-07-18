@@ -1,5 +1,6 @@
 import React from 'react'
-import logoImg from "../../assets/Images/store-name.png"
+import logoImg from "../../assets/Images/Sport_Cycle-removebg-preview.png"
+import { Link } from 'react-router-dom'
 
 function Footer() {
   return (
@@ -12,14 +13,14 @@ function Footer() {
         </div>
 
         <p className="mt-6 max-w-md text-center leading-relaxed text-gray-200 sm:max-w-xs sm:text-left">
-        Julie's Cycles Limited is a company registered in England & Wales with company number 05616464.
-        Registered office: 212-216 Clarendon Park Road, LEICESTER, LE2 3AG. VAT number: 114 3499 79.
+        Rolling Cycle Limited is a company registered in Kanpur & Wales with company number 01234567.
+        Registered office: 212-216 Kanpur Park Road, INDIA, LE3 3AK. VAT number: 224 4599 89.
         </p>
 
         <ul className="mt-8 flex justify-center gap-6 sm:justify-start md:gap-8">
           <li>
-            <a
-              href="https://www.facebook.com/julies212/"
+            <Link
+              to="https://www.facebook.com/"
               rel="noreferrer"
               target="_blank"
               className="text-white transition hover:text-gray-300"
@@ -32,12 +33,12 @@ function Footer() {
                   clipRule="evenodd"
                 />
               </svg>
-            </a>
+            </Link>
           </li>
 
           <li>
-            <a
-              href="https://www.instagram.com/juliescycles/"
+            <Link
+              to="https://www.instagram.com/"
               rel="noreferrer"
               target="_blank"
               className="text-white transition hover:text-gray-300"
@@ -50,12 +51,12 @@ function Footer() {
                   clipRule="evenodd"
                 />
               </svg>
-            </a>
+            </Link>
           </li>
 
           <li>
-            <a
-              href="https://x.com/JuliesCycles"
+            <Link
+              to="https://x.com/"
               rel="noreferrer"
               target="_blank"
               className="text-white transition hover:text-gray-300"
@@ -66,7 +67,7 @@ function Footer() {
                   d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"
                 />
               </svg>
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
@@ -77,29 +78,29 @@ function Footer() {
 
           <ul className="mt-8 space-y-4 text-sm">
             <li>
-              <a className="text-gray-200 transition hover:text-gray-400" href="#">
+              <Link className="text-gray-200 transition hover:text-gray-400" to="/">
               Home
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a className="text-gray-200 transition hover:text-gray-400" href="#">
+              <Link className="text-gray-200 transition hover:text-gray-400" to="/contact">
               Contact
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a className="text-gray-200 transition hover:text-gray-400" href="#">
+              <Link className="text-gray-200 transition hover:text-gray-400" to="/workshop">
               Workshop
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a className="text-gray-200 transition hover:text-gray-400" href="#"> Finance </a>
+              <Link className="text-gray-200 transition hover:text-gray-400" to="/"> Finance </Link>
             </li>
 
             <li>
-              <a className="text-gray-200 transition hover:text-gray-400" href="#"> Klarna </a>
+              <Link className="text-gray-200 transition hover:text-gray-400" to="/"> Klarna </Link>
             </li>
           </ul>
         </div>
@@ -109,17 +110,17 @@ function Footer() {
 
           <ul className="mt-8 space-y-4 text-sm">
             <li>
-              <a className="text-gray-200 transition hover:text-gray-400" href="#">
+              <Link className="text-gray-200 transition hover:text-gray-400" to="#">
               Terms And Conditions
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a className="text-gray-200 transition hover:text-gray-400" href="#"> Delivery And Returns </a>
+              <Link className="text-gray-200 transition hover:text-gray-400" to="#"> Delivery And Returns </Link>
             </li>
 
             <li>
-              <a className="text-gray-200 transition hover:text-gray-400" href="#"> The Cycle To Work Scheme </a>
+              <Link className="text-gray-200 transition hover:text-gray-400" to="#"> The Cycle To Work Scheme </Link>
             </li>
 
           
@@ -131,23 +132,23 @@ function Footer() {
 
           <ul className="mt-8 space-y-4 text-sm">
             <li>
-              <a className="text-gray-200 transition hover:text-gray-400" href="#"> Monday: Closed </a>
+              <p className="text-gray-200 transition hover:text-gray-400" > Monday: Closed </p>
             </li>
 
             <li>
-              <a className="text-gray-200 transition hover:text-gray-400" href="#"> Tuesday: 09:00 – 17:30 </a>
+              <p className="text-gray-200 transition hover:text-gray-400" > Tuesday: 09:00 – 17:30 </p>
             </li>
             <li>
-              <a className="text-gray-200 transition hover:text-gray-400" href="#"> Thursday: 09:00–17:30 </a>
+              <p className="text-gray-200 transition hover:text-gray-400" > Thursday: 09:00–17:30 </p>
             </li>
             <li>
-              <a className="text-gray-200 transition hover:text-gray-400" href="#"> Friday: 09:00–17:30 </a>
+              <p className="text-gray-200 transition hover:text-gray-400" > Friday: 09:00–17:30 </p>
             </li>
             <li>
-              <a className="text-gray-200 transition hover:text-gray-400" href="#"> Saturday: 09:00–17:00 </a>
+              <p className="text-gray-200 transition hover:text-gray-400" > Saturday: 09:00–17:00 </p>
             </li>
             <li>
-              <a className="text-gray-200 transition hover:text-gray-400" href="#"> Sunday: Closed </a>
+              <p className="text-gray-200 transition hover:text-gray-400"> Sunday: Closed </p>
             </li>
 
            
@@ -159,9 +160,9 @@ function Footer() {
 
           <ul className="mt-8 space-y-4 text-sm">
             <li>
-              <a
+              <Link
                 className="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
-                href="#"
+                to="#"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -178,14 +179,14 @@ function Footer() {
                   />
                 </svg>
 
-                <span className="flex-1 text-gray-200">sales@juliescycles.co.uk</span>
-              </a>
+                <span className="flex-1 text-gray-200">info@rollingwheel.co</span>
+              </Link>
             </li>
 
             <li>
-              <a
+              <Link
                 className="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
-                href="#"
+                to="#"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -202,8 +203,8 @@ function Footer() {
                   />
                 </svg>
 
-                <span className="flex-1 text-gray-200">0116 270 7936 or 0116 2709094</span>
-              </a>
+                <span className="flex-1 text-gray-200">01234 23456 or 0227 2709094</span>
+              </Link>
             </li>
 
             <li
@@ -230,10 +231,10 @@ function Footer() {
               </svg>
 
               <address className="-mt-0.5 flex-1 not-italic text-gray-200">
-                212 - 216 Clarendon Park Rd
+                212 - 216 Kanpur Park Rd
                <div className='flex flex-col'>
-               <span> Leicester</span>
-               <span>  LE2 3AG</span>
+               <span> India</span>
+               <span>  LE3 3AK</span>
                </div>
               </address>
               
@@ -248,21 +249,21 @@ function Footer() {
         <p className="text-sm text-gray-400">
           <span className="block sm:inline">All rights reserved.</span>
 
-          <a
+          <Link
             className="inline-block text-teal-600 underline transition hover:text-teal-600/75"
-            href="#"
+            to="#"
           >
             Terms & Conditions
-          </a>
+          </Link>
 
           <span>&middot;</span>
 
-          <a
+          <Link
             className="inline-block text-teal-600 underline transition hover:text-teal-600/75"
-            href="#"
+            to="#"
           >
             Privacy Policy
-          </a>
+          </Link>
         </p>
 
         <p className="mt-4 text-sm text-gray-400 sm:order-first sm:mt-0">&copy; 2022 Company Name</p>

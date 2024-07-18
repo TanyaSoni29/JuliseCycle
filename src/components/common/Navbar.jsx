@@ -1,7 +1,7 @@
 /** @format */
 
 import React, { useState } from 'react';
-import logo from '../../assets/Images/store-name.png';
+import logo from '../../assets/Images/Sport_Cycle-removebg-preview.png';
 import { Link } from 'react-router-dom';
 import { FaRegUser } from 'react-icons/fa';
 import { IoSearchSharp } from 'react-icons/io5';
@@ -22,7 +22,10 @@ const CATEGORY_TITLES = [
 
 const CategoryDropdown = ({ title, links }) => (
 	<div className='group py-8'>
-		<p className='font-medium cursor-pointer'>{title}</p>
+		<Link to={`/shop/${title?.toLowerCase()}`}>
+			<p className='font-medium cursor-pointer'>{title}</p>
+		</Link>
+
 		<div className='invisible opacity-0 transition-opacity duration-200 ease-linear absolute z-[1000] top-20 left-0 w-full group-hover:visible group-hover:opacity-100 bg-white rounded-md shadow-[0_3px_10px_rgb(0,0,0,0.2)] text-black flex justify-start p-2 flex-wrap hover:opacity-100'>
 			<div className='grid grid-cols-6 gap-x-8 gap-y-4 place-content-center place-items-start mx-auto font-medium cursor-pointer'>
 				{links.map((sublink, index) => (
@@ -43,7 +46,7 @@ const CategoryDropdown = ({ title, links }) => (
 function Navbar() {
 	const [inputVisible, setInputVisible] = useState(false);
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-	const cart = useSelector(state => state.cart);
+	const cart = useSelector((state) => state.cart);
 
 	const handleButtonClick = () => {
 		setInputVisible(!inputVisible);
@@ -59,12 +62,13 @@ function Navbar() {
 					<Link to='/'>
 						<img
 							src={logo}
-							width={150}
-							height={35}
+							width={170}
+							height={60}
 							loading='lazy'
 							alt='logoImg'
 							className='object-contain'
 						/>
+						
 					</Link>
 				</div>
 
@@ -81,9 +85,15 @@ function Navbar() {
 							)
 						);
 					})}
-					<div className='font-medium'>Sales</div>
-					<div className='font-medium'>Brands</div>
-					<div className='font-medium'>Workshop</div>
+					<Link to='/sale'>
+						<div className='font-medium'>Sale</div>
+					</Link>
+					<Link to='/shop/brands'>
+						<div className='font-medium'>Brands</div>
+					</Link>
+					<Link to='/workshop'>
+						<div className='font-medium'>Workshop</div>
+					</Link>
 				</div>
 				<div className='hidden text-white md:flex justify-center items-center gap-4'>
 					<div className='flex items-center'>
@@ -111,14 +121,18 @@ function Navbar() {
 						/>
 					</Link>
 					<Link to='/basket'>
-					<div className='relative'>
-					<BsCart4
-							fontWeight={2}
-							fontSize={18}
-							className='text-white'
-						/>
-						{cart.length>0 && (<span className='absolute -top-1 -right-2 bg-green-600 text-xs h-5 w-5 flex justify-center items-center animate-bounce rounded-full text-white'>{cart.length}</span>) }
-					</div>
+						<div className='relative'>
+							<BsCart4
+								fontWeight={2}
+								fontSize={18}
+								className='text-white'
+							/>
+							{cart.length > 0 && (
+								<span className='absolute -top-1 -right-2 bg-green-600 text-xs h-5 w-5 flex justify-center items-center animate-bounce rounded-full text-white'>
+									{cart.length}
+								</span>
+							)}
+						</div>
 					</Link>
 				</div>
 
@@ -142,15 +156,18 @@ function Navbar() {
 						)}
 					</div>
 					<Link to='/basket'>
-					<div className='relative'>
-					<BsCart4
-							fontWeight={2}
-							fontSize={18}
-							className='text-white'
-						/>
-						{cart.length>0 && (<span className='absolute -top-1 -right-2 bg-green-600 text-xs h-5 w-5 flex justify-center items-center animate-bounce rounded-full text-white'>{cart.length}</span>) }
-					</div>
-						
+						<div className='relative'>
+							<BsCart4
+								fontWeight={2}
+								fontSize={18}
+								className='text-white'
+							/>
+							{cart.length > 0 && (
+								<span className='absolute -top-1 -right-2 bg-green-600 text-xs h-5 w-5 flex justify-center items-center animate-bounce rounded-full text-white'>
+									{cart.length}
+								</span>
+							)}
+						</div>
 					</Link>
 					<button
 						onClick={handleHambergerClick}
